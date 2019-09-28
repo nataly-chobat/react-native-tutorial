@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="11" lines-covered="11" line-rate="1" branches-valid="0" branches-covered="0" branch-rate="1" timestamp="1562759612801" complexity="0" version="0.1">
+  <sources>
+    <source>/Users/natalliachobat/projects/MEETUP/Meetup/react-native-tutorial</source>
+  </sources>
+  <packages>
+    <class name="CardItem.js" filename="src/CardItem.js" line-rate="1" branch-rate="1">
+      <methods>
+        <method name="(anonymous_0)" hits="2" signature="()V">
+          <lines>
+            <line number="11" hits="2"/>
+          </lines>
+        </method>
+        <method name="(anonymous_1)" hits="1" signature="()V">
+          <lines>
+            <line number="37" hits="1"/>
+          </lines>
+        </method>
+        <method name="(anonymous_2)" hits="2" signature="()V">
+          <lines>
+            <line number="43" hits="2"/>
+          </lines>
+        </method>
+      </methods>
+      <lines>
+        <line number="12" hits="2" branch="false"/>
+        <line number="13" hits="2" branch="false"/>
+        <line number="15" hits="2" branch="false"/>
+        <line number="22" hits="2" branch="false"/>
+        <line number="29" hits="2" branch="false"/>
+        <line number="38" hits="1" branch="false"/>
+        <line number="40" hits="1" branch="false"/>
+        <line number="44" hits="2" branch="false"/>
+        <line number="45" hits="2" branch="false"/>
+        <line number="47" hits="2" branch="false"/>
+        <line number="68" hits="1" branch="false"/>
+      </lines>
+    </class>
+  </packages>
+</coverage>

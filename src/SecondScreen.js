@@ -1,12 +1,61 @@
 /* @flow */
 
 import * as React from 'react';
-import { Text } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, Image } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+
+import { getCatDataById } from './fake-api/fake-api';
 
 class SecondScreen extends React.PureComponent {
+    state = {
+        details: {}
+    };
+
+    componentDidMount() {
+        this.getCatData();
+    }
+
+    getCatData = async () => {
+        const { id } = this.props;
+
+        const details = await getCatDataById(id);
+
+        this.setState({ details });
+    }
+
     render() {
+        const { details } = this.state;
+        const { url, image, breed, age, description, randomFact } = details;
+
         return (
-            <Text>Welcome to React Native!</Text>
+            <LinearGradient
+                colors={['#152a57', '#333d6e', '#54243a']}
+                style={{flex: 1}}
+            >
+                <ScrollView style={styles.container}>
+                    <View style={styles.imageWrapper}>
+                        <Image source={{ uri: url }} style={styles.image} />
+                    </View>
+                    <View style={styles.line} />
+                    <View style={styles.infoItem}>
+                        <Text style={styles.infoItemHeading}>Порода:</Text>
+                        <Text style={styles.infoItemText}>{breed}</Text>
+                    </View>
+                    <View style={styles.infoItem}>
+                        <Text style={styles.infoItemHeading}>Возраст:</Text>
+                        <Text style={styles.infoItemText}>{age}</Text>
+                    </View>
+                    <View style={styles.infoItem}>
+                        <Text style={styles.infoItemHeading}>Описание:</Text>
+                        <Text style={styles.infoItemText}>{description}</Text>
+                    </View>
+                    <View style={styles.line} />
+                    <View style={styles.infoItem}>
+                        <Text style={styles.infoItemHighlight}>Рандомный факт о котах:</Text>
+                        <Text style={styles.infoItemText}>{randomFact}</Text>
+                    </View>
+                </ScrollView>
+            </LinearGradient>
         )
     }
 }

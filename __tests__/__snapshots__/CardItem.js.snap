@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItem component renders correctly 1`] = `
+<Button
+  onPress={[Function]}
+  testID="catInfo"
+>
+  <View
+    style={
+      Object {
+        "borderColor": "#ccc",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "flexDirection": "column",
+        "margin": 10,
+        "paddingHorizontal": 10,
+        "paddingVertical": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Габи
+      </Text>
+      <Text>
+        Абиссинская кошка
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#d1d1d1",
+          "marginVertical": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Component
+        source={
+          Object {
+            "uri": "https://petstory.ru/resize/800x800x80/upload/images/articles/breeds/abissinskaya-koshka/abisin_cat_3.jpg",
+          }
+        }
+        style={
+          Object {
+            "height": 130,
+            "marginVertical": 10,
+            "width": 260,
+          }
+        }
+      />
+    </View>
+    <Text
+      ellipsizeMode="tail"
+      numberOfLines={2}
+    >
+      Эти кошки становятся похожими на пантеру, когда начинают играть или чем-то занимаются.
+    </Text>
+  </View>
+</Button>
+`;
